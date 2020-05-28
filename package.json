@@ -1,12 +1,11 @@
 {
   "name": "nodejs-typescript-starter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "My personal NodeJS-TypeScript starter",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require ts-node/register test/**/*.ts"
   },
-  "author": "",
+  "author": "Jeroen Van den Berghe",
   "license": "ISC",
   "devDependencies": {
     "@types/aws-lambda": "^8.10.51",
