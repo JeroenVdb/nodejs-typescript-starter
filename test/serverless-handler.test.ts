@@ -1,8 +1,6 @@
 import assert from 'assert';
 import { run } from '../src/serverless-handler';
 
-import { mock } from 'intermock';
-
 describe('Serverless handler', function () {
 	it('should return 200 with greeting', async function () {
 		// @ts-ignore
