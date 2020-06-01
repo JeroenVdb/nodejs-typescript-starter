@@ -1,12 +1,14 @@
-import {
-	APIGatewayProxyHandler,
-	Handler /* can be: Handler, SNSHandler, etc... */,
-} from 'aws-lambda';
+import { APIGatewayProxyHandler /* can be: Handler, SNSHandler, etc... */ } from 'aws-lambda';
 import { greeting } from './index';
 
 export const run: APIGatewayProxyHandler = async (event, _context) => {
 	return {
 		statusCode: 200,
-		body: greeting('Jeroen'),
+		body: `
+			<h1>Hello ${greeting('Jeroen')}</h1>
+			<code>
+				${JSON.stringify(event.body, null, 4)}
+			</code>
+		`,
 	};
 };
